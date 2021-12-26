@@ -4,24 +4,49 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <title>Snowpack App</title>
   </head>
   <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main class="mainDiv" id="mainDiv">
+      <div class="searchDiv" style="margin: 2rem 0 1rem 4rem">
+        <input
+          type="text"
+          name="stockName"
+          placeholder="Stock Trading Acronym"
+          class="inputName"
+        />
+        <label for="startDate" style="margin-left: 1rem">Start Date</label>
+        <input type="date" name="startDate" class="startDate" />
+        <label for="endDate" style="margin-left: 1rem">End Date</label>
+        <input type="date" name="endDate" class="endDate" />
+        <input type="submit" value="search" class="searchStock dropbtn" />
+      </div>
+      <div class="outerChart" style="margin: 0 8rem 0 8rem">
+        <div id="chartContainer" style="height: 370px; width: 100%"></div>
+      </div>
+      <input
+        type="button"
+        value="Display"
+        class="btnDisplay dropbtn"
+        style="margin: 2rem 0 1rem 4rem"
+      />
+      <div
+        class="displayDiv"
+        style="
+          margin: 0 4rem 0 4reml;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <table class="tableData" style="border: 1px solid black"></table>
+      </div>
+    </main>
     <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

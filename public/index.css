@@ -1,14 +1,24 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+body {
+  background: linear-gradient(45deg, #d8dcac, #eceed6);
 }
 
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+.dropbtn {
+  background-color: #f50f04;
+  color: white;
+  border-radius: 1rem;
+}
+
+.dropbtn:hover {
+  background-color: #690601;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: right;
+  padding: 8px;
+  background: #e2e5ec;
 }
