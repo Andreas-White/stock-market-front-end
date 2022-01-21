@@ -12,7 +12,7 @@ async function createChart(name, startDate, endDate) {
 
   let stocks = [];
   let counter = 0;
-  parseFloat;
+
   data.forEach((element) => {
     stocks[counter++] = {
       date: element.date,

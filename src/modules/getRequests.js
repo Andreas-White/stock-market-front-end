@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 const getStockData = async (name, start, end) => {
-  const url = `http://localhost:8080/stock/${name}/${start}/${end}`;
+  const url = `https://stock-market-backend-v01.herokuapp.com/stock/${name}/${start}/${end}`;
   const response = await fetch(url);
 
   if (response.status !== 200) {
