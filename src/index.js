@@ -6,10 +6,10 @@ const inputEndDate = document.querySelector('.endDate');
 const inputSearch = document.querySelector('.searchStock');
 
 let name = 'AAPL';
-let startDate = '2020-11-20';
-let endDate = '2021-10-06';
+let initStartDate = getStartDate();
+let initEndDate = getEndDate();
 
-await chart.createChart(name, startDate, endDate);
+await chart.createChart(name, initStartDate, initEndDate);
 
 inputSearch.addEventListener('click', async () => {
   name = inputStock.value;
@@ -17,14 +17,22 @@ inputSearch.addEventListener('click', async () => {
   endDate = inputEndDate.value;
 
   if (startDate === '') {
-    let newDate = new Date();
-    newDate.setFullYear(newDate.getFullYear() - 1);
-    startDate = newDate.toISOString().split('T')[0];
+    startDate = getStartDate();
   }
 
   if (endDate === '') {
-    endDate = new Date().toISOString().split('T')[0];
+    endDate = getEndDate();
   }
 
   await chart.createChart(name, startDate, endDate);
 });
+
+function getStartDate() {
+  let newDate = new Date();
+  newDate.setFullYear(newDate.getFullYear() - 1);
+  return newDate.toISOString().split('T')[0];
+}
+
+function getEndDate() {
+  return new Date().toISOString().split('T')[0];
+}
