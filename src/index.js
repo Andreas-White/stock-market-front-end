@@ -12,9 +12,9 @@ let initEndDate = getEndDate();
 await chart.createChart(name, initStartDate, initEndDate);
 
 inputSearch.addEventListener('click', async () => {
-  name = inputStock.value;
-  startDate = inputStartDate.value;
-  endDate = inputEndDate.value;
+  let name = inputStock.value;
+  let startDate = inputStartDate.value;
+  let endDate = inputEndDate.value;
 
   if (startDate === '') {
     startDate = getStartDate();
