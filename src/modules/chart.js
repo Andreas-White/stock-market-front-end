@@ -27,8 +27,8 @@ async function createChart(name, startDate, endDate) {
 
   let tickNumber = 0;
 
-  if (stocks.length >= 20) {
-    tickNumber = 20;
+  if (stocks.length >= 11) {
+    tickNumber = 11;
   } else {
     tickNumber = stocks.length;
   }
