@@ -6,6 +6,7 @@ body {
   background-color: #f50f04;
   color: white;
   border-radius: 1rem;
+  padding: 6px;
 }
 
 .dropbtn:hover {
@@ -21,4 +22,13 @@ td {
   text-align: right;
   padding: 8px;
   background: #e2e5ec;
+}
+
+.inputName,
+.startDate,
+.endDate {
+  background-color: #e7ebc3;
+  color: rgb(24, 23, 23);
+  padding: 6px;
+  border-radius: 8px;
 }
